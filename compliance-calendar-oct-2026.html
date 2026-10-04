@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JKS Corptax – Statutory Compliance Calendar – October 2026</title>
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#eef1f5; --paper:#ffffff; --ink:#1b2430; --muted:#5b6675; --line:#d5dbe3;
+  --navy:#0b2a4a; --navy2:#13406f; --gold:#b8893b; --head-ink:#ffffff;
+  --row-alt:#f6f8fb; --weekend:#f1f3f6; --hl:#fff6df; --hl-line:#e6c97a;
+  --it:#1d4ed8; --gst:#0f766e; --pf:#9a3412; --roc:#6d28d9; --sebi:#be123c; --pt:#4b5563;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c121a; --paper:#141c27; --ink:#e6ebf2; --muted:#9aa6b6; --line:#2a3646;
+    --navy:#0a1f38; --navy2:#16406b; --gold:#d9a955; --row-alt:#182231; --weekend:#1a2432;
+    --hl:#2b2412; --hl-line:#6b5522;
+    --it:#7aa2ff; --gst:#4fd1c0; --pf:#fb9a62; --roc:#b79bff; --sebi:#ff7c9c; --pt:#aab4c2;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c121a; --paper:#141c27; --ink:#e6ebf2; --muted:#9aa6b6; --line:#2a3646;
+  --navy:#0a1f38; --navy2:#16406b; --gold:#d9a955; --row-alt:#182231; --weekend:#1a2432;
+  --hl:#2b2412; --hl-line:#6b5522;
+  --it:#7aa2ff; --gst:#4fd1c0; --pf:#fb9a62; --roc:#b79bff; --sebi:#ff7c9c; --pt:#aab4c2;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Segoe UI",Calibri,Roboto,"Helvetica Neue",Arial,sans-serif;font-size:14px;line-height:1.45}
+.sheet{max-width:1180px;margin:18px auto;background:var(--paper);border:1px solid var(--line);
+  box-shadow:0 4px 24px rgba(0,0,0,.08)}
+/* Letterhead */
+.head{background:linear-gradient(120deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;
+  padding:22px 28px 18px;border-bottom:4px solid var(--gold);display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{width:54px;height:54px;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;
+  font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:20px;letter-spacing:1px;color:#fff}
+.brand h1{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:26px;letter-spacing:.5px;font-weight:700}
+.brand small{display:block;color:#d6c08a;letter-spacing:2.2px;text-transform:uppercase;font-size:10.5px;margin-top:2px}
+.head .meta{text-align:right;font-size:12px;color:#dbe5f2}
+.head .meta b{color:#fff}
+.title{padding:18px 28px 6px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.title h2{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:22px;color:var(--navy2)}
+:root[data-theme="dark"] .title h2{color:#9cc0ee}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .title h2{color:#9cc0ee}}
+.title p{margin:2px 0 0;color:var(--muted);font-size:12.5px}
+.badge{border:1px solid var(--gold);color:var(--gold);padding:4px 10px;font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+/* top section */
+.top{display:grid;grid-template-columns:300px 1fr;gap:20px;padding:12px 28px 6px}
+@media(max-width:820px){.top{grid-template-columns:1fr}}
+.cal{border:1px solid var(--line)}
+.cal .ch{background:var(--navy);color:#fff;text-align:center;padding:6px;font-weight:600;letter-spacing:1px;font-size:12.5px}
+.cal table{width:100%;border-collapse:collapse;table-layout:fixed}
+.cal th{font-size:10.5px;color:var(--muted);padding:4px 0;border-bottom:1px solid var(--line)}
+.cal td{height:30px;text-align:center;font-size:12px;border:1px solid var(--line);position:relative}
+.cal td.we{background:var(--weekend);color:var(--muted)}
+.cal td.due{background:var(--hl);border-color:var(--hl-line);font-weight:700;color:var(--ink)}
+.cal td.due::after{content:"";position:absolute;bottom:3px;left:50%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--gold)}
+.cal td.hol{outline:2px solid var(--sebi);outline-offset:-3px}
+.legend{font-size:10.5px;color:var(--muted);padding:6px 8px;border-top:1px solid var(--line)}
+.legend i{display:inline-block;width:9px;height:9px;margin:0 3px 0 6px;vertical-align:middle}
+.updates{border:1px solid var(--hl-line);background:var(--hl);padding:12px 16px}
+.updates h3{margin:0 0 6px;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--gold)}
+.updates ul{margin:0;padding-left:18px}
+.updates li{margin:4px 0;font-size:12.8px}
+/* table */
+.tablewrap{padding:12px 28px 6px;overflow-x:auto}
+table.main{width:100%;border-collapse:collapse;min-width:900px;font-size:12.8px}
+table.main thead th{background:var(--navy);color:var(--head-ink);text-align:left;padding:9px 8px;font-size:11.5px;
+  letter-spacing:.6px;text-transform:uppercase;border:1px solid var(--navy);position:sticky;top:0}
+table.main td{padding:8px;border:1px solid var(--line);vertical-align:top}
+table.main tbody tr:nth-child(even) td{background:var(--row-alt)}
+td.sr{text-align:center;width:44px;color:var(--muted)}
+td.dt{width:104px;white-space:nowrap}
+td.dt b{display:block;font-size:13.5px}
+td.dt span{color:var(--muted);font-size:11.5px}
+td.dt .wk{color:var(--sebi);font-weight:600}
+.act{font-weight:600;font-size:12.5px}
+.chip{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:1px 6px;border:1px solid currentColor;margin-bottom:3px}
+.c-it{color:var(--it)}.c-gst{color:var(--gst)}.c-pf{color:var(--pf)}.c-roc{color:var(--roc)}.c-sebi{color:var(--sebi)}.c-pt{color:var(--pt)}
+td.form{width:150px;font-weight:600}
+td.rem{color:var(--muted);font-size:12px;width:230px}
+tr.key td{background:var(--hl) !important}
+/* footer */
+.contact{margin:14px 28px 0;border-top:3px solid var(--gold);padding-top:14px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:18px}
+@media(max-width:820px){.contact{grid-template-columns:1fr}}
+.contact h4{margin:0 0 4px;font-family:Georgia,"Times New Roman",serif;font-size:15px;color:var(--navy2)}
+:root[data-theme="dark"] .contact h4{color:#9cc0ee}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .contact h4{color:#9cc0ee}}
+.contact p{margin:2px 0;font-size:12.5px}
+.contact .lbl{color:var(--muted);font-size:10.5px;text-transform:uppercase;letter-spacing:1px;display:block;margin-top:6px}
+.disc{margin:16px 28px 0;padding:10px 0 20px;border-top:1px solid var(--line);font-size:9px;line-height:1.45;color:var(--muted);text-align:justify}
+.disc b{color:var(--ink)}
+.strip{background:var(--navy);color:#cfd9e6;text-align:center;font-size:10.5px;padding:7px;letter-spacing:.6px}
+.toolbar{max-width:1180px;margin:14px auto 0;display:flex;justify-content:flex-end;padding:0 4px}
+.toolbar button{background:var(--navy);color:#fff;border:0;padding:8px 16px;font-size:12.5px;cursor:pointer;font-family:inherit}
+.toolbar button:hover{background:var(--navy2)}
+@media print{
+  @page{size:A4 landscape;margin:8mm}
+  :root{--bg:#fff;--paper:#fff;--ink:#111;--muted:#555;--line:#c9d0d9;--row-alt:#f5f7fa;--weekend:#f0f2f5;--hl:#fff6df;
+    --navy:#0b2a4a;--navy2:#13406f;--gold:#b8893b;--it:#1d4ed8;--gst:#0f766e;--pf:#9a3412;--roc:#6d28d9;--sebi:#be123c;--pt:#4b5563;
+    padding:0}
+  body{font-size:11px;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .toolbar{display:none}
+  .sheet{margin:0;border:0;box-shadow:none;max-width:none}
+  .tablewrap{overflow:visible}
+  table.main{min-width:0;font-size:10.5px}
+  table.main thead th{position:static}
+  tr{page-break-inside:avoid}
+  .title h2,.contact h4{color:#13406f !important}
+}
+</style>
+</head>
+<body>
+<div class="toolbar"><button onclick="window.print()">Print / Save as PDF</button></div>
+<div class="sheet">
+
+  <header class="head">
+    <div class="brand">
+      <div class="logo">JKS</div>
+      <div>
+        <h1>JKS Corptax</h1>
+        <small>Tax &bull; Corporate &bull; Compliance Advisory</small>
+      </div>
+    </div>
+    <div class="meta">
+      Client Advisory Series<br>
+      <b>Compliance Calendar &ndash; Oct 2026</b><br>
+      Prepared on: 03 October 2026
+    </div>
+  </header>
+
+  <section class="title">
+    <div>
+      <h2>Statutory Compliance Due Date Calendar &ndash; October 2026</h2>
+      <p>Income-tax &bull; GST &bull; EPF &amp; ESI &bull; Companies Act / LLP &bull; SEBI &bull; Professional Tax &nbsp;|&nbsp; Financial Year 2026-27</p>
+    </div>
+    <div class="badge">Month: October 2026</div>
+  </section>
+
+  <section class="top">
+    <div class="cal">
+      <div class="ch">OCTOBER 2026</div>
+      <table id="cal"></table>
+      <div class="legend"><i style="background:var(--hl);border:1px solid var(--hl-line)"></i>Due date
+        <i style="background:var(--weekend);border:1px solid var(--line)"></i>Weekend
+        <i style="border:2px solid var(--sebi)"></i>Holiday</div>
+    </div>
+    <div class="updates">
+      <h3>Key Updates &amp; Points to Note</h3>
+      <ul>
+        <li><b>Tax Audit Report</b> (s.44AB) for AY 2026-27 &ndash; CBDT has extended the due date from 30 Sep to <b>21 Oct 2026</b>; ITR for such cases extended from 31 Oct to <b>21 Nov 2026</b> (CBDT press release dated 28 Sep 2026; formal notification to follow).</li>
+        <li><b>New Income-tax Act, 2025</b> is effective from 1 Apr 2026 &ndash; TDS/TCS statements now use new forms (Form 138 / 140 / 144 / 143); AY 2026-27 returns continue under the 1961 Act.</li>
+        <li><b>Weekend / holiday dates</b> &ndash; GST dates falling on Sat/Sun and the 20 Oct (Dussehra) holiday are not automatically extended; file early.</li>
+        <li><b>GSTR-3B (QRMP)</b> &ndash; Gujarat falls in Category X: due <b>22 Oct</b>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="tablewrap">
+    <table class="main">
+      <thead>
+        <tr>
+          <th>Sr. No.</th><th>Due Date</th><th>Act / Law</th><th>Form / Return No.</th>
+          <th>Compliance Obligation</th><th>Period / Applicability</th><th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </section>
+
+  <section class="contact">
+    <div>
+      <h4>JKS CorpTax</h4>
+      <p>SF 204, Radhe Icon, Petlad Road,<br>Pilpag &ndash; 387355, Kheda,<br>Gujarat, India</p>
+      <span class="lbl">Website</span><p><a href="https://www.jkscorptax.in" style="color:inherit">www.jkscorptax.in</a></p>
+    </div>
+    <div>
+      <h4>Contact Us</h4>
+      <span class="lbl">Phone</span><p>+91-89057 27571 &nbsp;|&nbsp; +91-94091 23357</p>
+      <span class="lbl">WhatsApp</span><p>+91-89057 27571 &nbsp;|&nbsp; +91-94091 23357</p>
+    </div>
+    <div>
+      <h4>Write to Us</h4>
+      <span class="lbl">Compliance Email</span><p>compliance@jkscorptax.in</p>
+      <span class="lbl">General Email</span><p>info@jkscorptax.in</p>
+    </div>
+  </section>
+
+  <section class="disc">
+    <b>Disclaimer:</b> This calendar has been prepared by JKS Corptax for general information and ready reference only, based on the provisions of the relevant Acts, Rules, notifications, circulars and press releases available as on 03 October 2026. Due dates are subject to change on account of extensions, notifications, orders of authorities, portal advisories, applicability thresholds, the date of the Annual General Meeting / Board approvals, State-specific laws and local holidays. Certain extensions mentioned herein are based on press releases and are subject to issue of formal notifications. This document does not constitute legal, tax or professional advice and should not be relied upon as a substitute for it. Applicability of each compliance depends on the facts of the case, the entity's constitution and the period concerned. Readers are advised to verify the due dates with the relevant statutes / official portals and to consult their professional advisor before acting. JKS Corptax, its partners and employees shall not be liable for any loss, penalty, interest or damage arising from the use of or reliance on this document. All rights reserved &copy; JKS Corptax 2026.
+  </section>
+  <div class="strip">JKS Corptax &nbsp;|&nbsp; Statutory Compliance Calendar &nbsp;|&nbsp; October 2026</div>
+</div>
+
+<script>
+// ---- Due-date data ----
+var CAT = {
+  it:{c:"c-it",t:"Income-tax"}, gst:{c:"c-gst",t:"GST"}, pf:{c:"c-pf",t:"EPF / ESI"},
+  roc:{c:"c-roc",t:"MCA / ROC"}, sebi:{c:"c-sebi",t:"SEBI"}, pt:{c:"c-pt",t:"Prof. Tax"}
+};
+var DAYS=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+// d, cat, act, form, obligation, period, remarks, key?
+var D = [
+ [7,"it","Income-tax Act","Challan (online)","Deposit of TDS / TCS deducted / collected during the month","Sep 2026","Govt. offices depositing without challan: same day. Quarterly deposit only where AO has permitted (Jul–Sep).",1],
+ [7,"it","Income-tax Act, 2025","Form 121 / Form 127","Upload of declarations received from deductees (Form 121 – quarter ended Sep 2026) and from buyers (Form 127 – during Sep 2026)","Sep 2026 / Q2","Where the relevant provisions apply."],
+ [10,"gst","CGST Act, 2017","GSTR-7","Return of tax deducted at source by GST deductors","Sep 2026","Applicable to notified GST TDS deductors."],
+ [10,"gst","CGST Act, 2017","GSTR-8","Statement of tax collected at source by e-commerce operators","Sep 2026","E-commerce operators (s.52)."],
+ [11,"gst","CGST Act, 2017","GSTR-1","Statement of outward supplies – monthly filers","Sep 2026","Falls on Sunday; no automatic extension – file by Fri 09 Oct."],
+ [13,"gst","CGST Act, 2017","GSTR-1 (QRMP)","Statement of outward supplies – quarterly filers (QRMP scheme)","Jul – Sep 2026","Quarterly filers opting for QRMP."],
+ [13,"gst","CGST Act, 2017","GSTR-5 / GSTR-6","Return by non-resident taxable person (GSTR-5) / Input Service Distributor (GSTR-6)","Sep 2026","As applicable."],
+ [15,"pf","EPF &amp; MP Act, 1952","ECR / Challan","Payment of PF contribution and filing of Electronic Challan-cum-Return","Sep 2026","Establishments covered under the EPF Act.",1],
+ [15,"pf","ESI Act, 1948","ESIC Challan","Payment of ESIC employer &amp; employee contribution","Sep 2026","Establishments covered under the ESI Act."],
+ [15,"it","Income-tax Act, 2025","Form 132","Issue of TDS certificate for tax deducted on specified payments reported via challan-cum-statement","Aug 2026","Verify deductee PAN, tax deducted and tax deposited before issue."],
+ [15,"sebi","SEBI (LODR) Regulations, 2015","Reg. 74(5)","Certificate from Depository Participant / RTA – listed entities","Quarter ended 30 Sep 2026","Listed entities only."],
+ [18,"gst","CGST Act, 2017","CMP-08","Statement-cum-challan for payment of tax by composition taxpayers","Jul – Sep 2026","Falls on Sunday; pay / file early."],
+ [20,"gst","CGST Act, 2017","GSTR-3B","Summary return and payment of tax – monthly filers","Sep 2026","20 Oct is Dussehra (holiday in many States) – file early. GSTR-5A (OIDAR) also due.",1],
+ [21,"it","Income-tax Act, 1961","Form 3CA / 3CB – 3CD","Furnishing of Tax Audit Report u/s 44AB (extended from 30 Sep 2026)","AY 2026-27","Specified audit category (Expl. 2 to s.139(1)); per CBDT press release 28 Sep 2026.",1],
+ [21,"sebi","SEBI (LODR) Regulations, 2015","Reg. 31, 27(2), 13(3)","Shareholding pattern; Corporate Governance report; Statement of investor complaints","Quarter ended 30 Sep 2026","Listed entities only."],
+ [22,"gst","CGST Act, 2017","GSTR-3B (QRMP)","Summary return and payment of tax – quarterly filers (Category X States incl. Gujarat, Maharashtra, MP, Karnataka, etc.)","Jul – Sep 2026","Category Y States / UTs: 24 Oct 2026 (Saturday)."],
+ [25,"gst","CGST Act, 2017","ITC-04","Details of goods sent to / received from job worker","Apr – Sep 2026","Half-yearly filers (turnover up to ₹5 Cr). Falls on Sunday."],
+ [30,"it","Income-tax Act, 2025","Form 141","Challan-cum-statement for TDS on specified payments (immovable property, rent, contractor, etc.)","Sep 2026","Statement-cum-challan filing for specified categories."],
+ [30,"roc","Companies Act, 2013","AOC-4 / AOC-4 XBRL","Filing of financial statements with the Registrar (within 30 days of AGM)","FY 2025-26","Assumes AGM held on 30 Sep 2026; MGT-7 / 7A due within 60 days of AGM. Date depends on actual AGM."],
+ [30,"roc","LLP Act, 2008","Form 8","Statement of Account &amp; Solvency of the LLP","FY 2025-26","All LLPs."],
+ [30,"sebi","SEBI (D&amp;P) Regulations, 2018","Reg. 76","Reconciliation of Share Capital Audit Report","Quarter ended 30 Sep 2026","Listed entities / issuers with dematerialised shares."],
+ [31,"it","Income-tax Act, 2025","Form 138","Quarterly TDS statement – salary (earlier Form 24Q)","Jul – Sep 2026 (Q2)","Employers; specified banks for senior-citizen income.",1],
+ [31,"it","Income-tax Act, 2025","Form 140","Quarterly TDS statement – non-salary payments to residents (earlier Form 26Q)","Jul – Sep 2026 (Q2)","Commission, brokerage, professional fees, rent, etc.",1],
+ [31,"it","Income-tax Act, 2025","Form 144","Quarterly TDS statement – payments to non-residents (earlier Form 27Q)","Jul – Sep 2026 (Q2)","Overseas payments subject to withholding.",1],
+ [31,"it","Income-tax Act, 2025","Form 143","Quarterly TCS statement (earlier Form 27EQ)","Jul – Sep 2026 (Q2)","Collectors of tax at source.",1],
+ [31,"it","Income-tax Act, 1961","Form 3CEB / 3CEAB / 3CEAC","Transfer Pricing report for international / specified domestic transactions; CbCR filings","FY 2025-26","Applicable entities only. ITR for TP cases is due on 30 Nov 2026."],
+ [31,"roc","Companies Act, 2013","MSME Form-1","Half-yearly return of outstanding dues to Micro &amp; Small Enterprises (over 45 days)","Apr – Sep 2026","Companies receiving MSME supplies and with dues outstanding > 45 days."],
+ [0,"pt","Gujarat State Tax on Professions, Trades, Callings &amp; Employments Act, 1976","PT Payment / Return","Deduction and deposit of Professional Tax on salaries / wages","Sep 2026","Due dates vary by State and employer category – refer to applicable State rules."]
+];
+var HOL = {2:1,20:1};
+var DUEDAYS = {};
+D.forEach(function(r){ if(r[0]) DUEDAYS[r[0]]=1; });
+
+// ---- Mini calendar ----
+(function(){
+  var h="<thead><tr>"+DAYS.map(function(d){return "<th>"+d.charAt(0)+d.charAt(1)+"</th>"}).join("")+"</tr></thead><tbody><tr>";
+  var first = new Date(2026,9,1).getDay(); // Thursday = 4
+  var col=0, i;
+  for(i=0;i<first;i++){h+="<td></td>";col++;}
+  for(var d=1; d<=31; d++){
+    var dow=new Date(2026,9,d).getDay();
+    var cls=[]; if(dow===0||dow===6) cls.push("we"); if(DUEDAYS[d]) cls.push("due"); if(HOL[d]) cls.push("hol");
+    h+="<td class='"+cls.join(" ")+"'>"+d+"</td>"; col++;
+    if(col===7 && d<31){h+="</tr><tr>";col=0;}
+  }
+  while(col<7 && col!==0){h+="<td></td>";col++;}
+  h+="</tr></tbody>";
+  document.getElementById("cal").innerHTML=h;
+})();
+
+// ---- Main table ----
+(function(){
+  var out="";
+  D.forEach(function(r,i){
+    var d=r[0], c=CAT[r[1]];
+    var dateHtml;
+    if(d){
+      var dt=new Date(2026,9,d), dow=dt.getDay(), we=(dow===0||dow===6);
+      dateHtml="<b>"+(d<10?"0"+d:d)+" Oct 2026</b><span"+(we||HOL[d]?" class='wk'":"")+">"+DAYS[dow]+(HOL[d]?" (Holiday)":"")+"</span>";
+    } else {
+      dateHtml="<b>Monthly</b><span>As per State law</span>";
+    }
+    out+="<tr"+(r[7]?" class='key'":"")+">"+
+      "<td class='sr'>"+(i+1)+"</td>"+
+      "<td class='dt'>"+dateHtml+"</td>"+
+      "<td><span class='chip "+c.c+"'>"+c.t+"</span><div class='act'>"+r[2]+"</div></td>"+
+      "<td class='form'>"+r[3]+"</td>"+
+      "<td>"+r[4]+"</td>"+
+      "<td>"+r[5]+"</td>"+
+      "<td class='rem'>"+r[6]+"</td></tr>";
+  });
+  document.getElementById("rows").innerHTML=out;
+})();
+</script>
+</body>
+</html>
